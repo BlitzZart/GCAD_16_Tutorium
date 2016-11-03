@@ -25,6 +25,5 @@ public class Movement : MonoBehaviour {
 		if (Input.GetKey(KeyCode.A)) {
 			transform.Rotate (0, -rotationSpeed * Time.deltaTime, 0);
 		}
-
 	}
 }

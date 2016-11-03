@@ -5,6 +5,8 @@ public class Bullet : MonoBehaviour {
 
 	public float speed = 50;
 	public float lifeTime = 5;
+    public float damage = 3;
+
 
     Rigidbody body;
 
@@ -17,7 +19,15 @@ public class Bullet : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        print("velo " + body.velocity.magnitude);
-	}
+	void OnCollisionEnter (Collision collision) {
+        if (collision.gameObject.tag == "Target") {
+            Health health = collision.gameObject.GetComponent<Health>();
+
+            if (health != null) {
+                health.Hit(damage);
+            }
+
+            Destroy(this.gameObject);
+        }
+    }
 }
