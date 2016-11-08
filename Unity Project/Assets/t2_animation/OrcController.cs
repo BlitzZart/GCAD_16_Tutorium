@@ -13,6 +13,10 @@ public class OrcController : MonoBehaviour {
         body = GetComponent<Rigidbody2D>();
     }
 
+    public float Speed() {
+        return body.velocity.magnitude;
+    }
+
     void Update() {
         if (Input.GetAxis("Horizontal") > 0) {
             orcAnimation.WalkRight();

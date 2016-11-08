@@ -14,12 +14,14 @@ public class MenuLogic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (menu == null)
+                return;
             menu.SetActive(!menu.activeSelf);
 
-            if (!menu.activeSelf)
-                Time.timeScale = 1;
-            else
-                Time.timeScale = 0;
+            //if (!menu.activeSelf)
+            //    Time.timeScale = 1;
+            //else
+            //    Time.timeScale = 0;
         }
 	}
 
