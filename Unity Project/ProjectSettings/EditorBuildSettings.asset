@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/t3_ui/menu.unity
+  - enabled: 1
+    path: Assets/t2_animation/animation.unity
