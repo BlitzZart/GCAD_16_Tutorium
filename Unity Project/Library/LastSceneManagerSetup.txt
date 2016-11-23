@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/t2_animation/animation.unity
+- path: Assets/3dAnimation/New Scene.unity
   isLoaded: 1
   isActive: 1
